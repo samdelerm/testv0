@@ -15,6 +15,12 @@ jobs:
       with:
         python-version: '3.12.8'
 
-    - name: Start Backend
+    - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Start Game Controller and Backend
+      run: |
+        python -m rsk.game_controller -s &
         python main.py
