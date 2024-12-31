@@ -16,7 +16,8 @@ jobs:
         python-version: '3.12.8'
     - name: ip
       run: |
-          ipconfig
+          ip addr show
+
 
     - name: Install dependencies
       run: |
