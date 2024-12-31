@@ -24,6 +24,11 @@ jobs:
       run: |
         python -m rsk.game_controller -s &
 
+    - name: Debugging
+      run: |
+        ls -l
+        cat src/soccer_sim.py
+
     - name: Start Backend with Gunicorn
       run: |
         pip install gunicorn
