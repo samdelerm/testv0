@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install rsk  # Installez le package rsk ou toutes autres dépendances nécessaires
+        pip install robot-soccer-kit[gc]  # Installez le package rsk ou toutes autres dépendances nécessaires
 
     - name: Run game controller on server
       run: |
