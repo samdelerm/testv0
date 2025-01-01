@@ -26,10 +26,5 @@ jobs:
 
     - name: Debugging
       run: |
-        ls -l
-        cat src/soccer_sim.py
+        ip addr show
 
-    - name: Start Backend with Gunicorn
-      run: |
-        pip install gunicorn
-        gunicorn -w 4 -b 0.0.0.0:5000 main:app
