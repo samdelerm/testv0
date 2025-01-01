@@ -1,4 +1,4 @@
-name: Deploy Site
+name: Deploy Site and Run Script
 
 on:
   push:
@@ -16,16 +16,18 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12.8'  # Assurez-vous que la version de Python correspond à celle requise par votre script
+        python-version: '3.x'  # Assurez-vous que la version de Python correspond à celle requise par votre script
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt  # Installez les dépendances nécessaires, si vous avez un fichier requirements.txt
+        pip install rsk  # Installez le package rsk ou toutes autres dépendances nécessaires
 
-    - name: Run game controller
+    - name: Run game controller on server
       run: |
         nohup python -m rsk.game_controller -s &
         sleep 10  # Attendre que le serveur démarre
+
+    
 
     - name: Display site content
       run: curl http://127.0.0.1:7070
