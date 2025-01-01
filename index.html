@@ -3,36 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
+    <title>Robot Soccer Kit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
         iframe {
             width: 100%;
-            height: 80vh;
+            height: 100vh;
             border: none;
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur Mon Site</h1>
-    <p>Le contenu du site est affiché ci-dessous :</p>
     <iframe src="http://127.0.0.1:7070" id="game-frame"></iframe>
-
-    <script>
-        // Ce script vérifie si l'iframe est chargée correctement
-        document.getElementById('game-frame').onload = function() {
-            console.log('Interface chargée avec succès.');
-        };
-    </script>
 </body>
 </html>
