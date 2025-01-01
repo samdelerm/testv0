@@ -1,4 +1,4 @@
 robot-soccer-kit[gc]
 flask
 tk
-request
+requests
