@@ -22,12 +22,8 @@ jobs:
 
     - name: Start Game Controller in background
       run: |
-        python -m rsk.game_controller -s &
+        python -m rsk.game_controller -s --ip 0.0.0.0 &
 
-    - name: Debugging
-      run: |
-        python websocket_server.py &
-    - name : ip
-      run: |
-        ip a
+    
+    
 
