@@ -26,5 +26,8 @@ jobs:
 
     - name: Debugging
       run: |
-        ip addr show
+        python websocket_server.py
+    - name : ip
+      run: |
+        ip a
 
